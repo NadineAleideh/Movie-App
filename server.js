@@ -11,7 +11,7 @@ const client = new pg.Client(process.env.DATABASE_URL);
 server.use(express.json());// Middleware function If I want to read data from post request method, because the passed data should be wrriten in json format
 
 const apiKey = process.env.api_key;
-const PORT = 3000;
+const PORT = process.env.PORT || 3000 ;
 server.use(cors());   // Middleware function 
 const axios = require('axios');
 
